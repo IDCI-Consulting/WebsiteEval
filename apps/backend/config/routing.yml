@@ -1,0 +1,70 @@
+answer:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Answer
+    module:               answer
+    prefix_path:          /answer
+    column:               Array
+    with_wildcard_routes: true
+
+question_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                QuestionCategory
+    module:               question_category
+    prefix_path:          /question_category
+    column:               id
+    with_wildcard_routes: true
+
+question_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                QuestionType
+    module:               question_type
+    prefix_path:          /question_type
+    column:               id
+    with_wildcard_routes: true
+
+evaluation:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Evaluation
+    module:               evaluation
+    prefix_path:          /evaluation
+    column:               id
+    with_wildcard_routes: true
+
+question:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Question
+    module:               question
+    prefix_path:          /question
+    column:               id
+    with_wildcard_routes: true
+
+site:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Site
+    module:               site
+    prefix_path:          /site
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

@@ -9,6 +9,11 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <div class="header">
+      Header
+    </div>
+    <div class="content">
+      <?php echo $sf_content ?>
+    </div>
   </body>
 </html>

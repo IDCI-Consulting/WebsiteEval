@@ -1,7 +1,11 @@
 all:
   doctrine:
-    class: sfDoctrineDatabase
-    param:
-      dsn: 'sqlite:/tmp/sf_sandbox/data/sandbox.db'
-      username: root
-      password: null
+   class:        sfDoctrineDatabase
+   param:
+     classname:  DebugPDO
+     dsn:        mysql:dbname=WebsiteEval;host=localhost
+     username:   WebsiteEval
+     password:   websiteeval
+     encoding:   utf8
+     persistent: true
+     pooling:    true

@@ -44,23 +44,60 @@ class websiteActions extends sfActions
     {
       $evaluation_id = $request->getParameter('evaluation_id');
     }
-     
-    $this->redirect('question', array(
+
+    $this->redirect('question_form', array(
       'evaluation_id' => $evaluation_id,
       'category_id' => $this->getUser()->getFirstQuestionCategoryId()
     ));
   }
   
-  public function executeQuestion(sfWebRequest $request)
-  {
-    $this->evaluation_id = $request->getParameter('evaluation_id');
-    $this->category_id = $request->getParameter('category_id');
-    $this->questionCategory = Doctrine_Core::getTable('QuestionCategory')->find($this->category_id);
-    $this->questions = $this->questionCategory->getQuestion();
-  }
-  
   public function executeQuestionForm(sfWebRequest $request)
   {
-    $form = new QuestionsCategoryForm();
+    $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
+    $category = Doctrine_Core::getTable('QuestionCategory')->find($request->getParameter('category_id'));
+
+    $options = array(
+      'evaluation' => $evaluation,
+      'questionCategory' => $category
+    );
+    
+    $this->form = new QuestionsCategoryForm(array(), $options);
+  }
+  
+  public function executeQuestionFormProcess(sfWebRequest $request)
+  {
+    $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
+    $category = Doctrine_Core::getTable('QuestionCategory')->find($request->getParameter('category_id'));
+
+    $options = array(
+      'evaluation' => $evaluation,
+      'questionCategory' => $category
+    );
+    
+    $form = new QuestionsCategoryForm(array(), $options);
+    
+    $form->bind($request->getParameter($form->getName()));
+    
+    if($form->isValid())
+    {
+      //die('save data');
+      
+      if ($request->getParameter('target') == 'previous')
+      {
+        $category_id = $this->getUser()->getPreviousQuestion($category->getId());
+      }
+      else
+      {
+        $category_id = $this->getUser()->getNextQuestion($category->getId());
+      } 
+        
+      $this->redirect('question_form', array(
+        'evaluation_id' => $evaluation->getId(),
+        'category_id' => $category_id
+      ));
+    }
+    
+    $this->form = $form;
+    $this->setTemplate('questionForm');
   }
 }

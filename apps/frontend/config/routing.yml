@@ -13,10 +13,18 @@ edit_evaluation:
   requirements:
     evaluation_id: \d+
 
-question:
-  url: /:evaluation_id/question/:category_id
-  param: { module: website, action: question }
+question_form:
+  url: /:evaluation_id/question_form/:category_id
+  param: { module: website, action: questionForm }
   requirements:
+    evaluation_id: \d+
+    category_id: \d+
+
+question_form_process:
+  url: /:evaluation_id/question_form_process/:category_id
+  param: { module: website, action: questionFormProcess }
+  requirements:
+    sf_method: [post]
     evaluation_id: \d+
     category_id: \d+
 

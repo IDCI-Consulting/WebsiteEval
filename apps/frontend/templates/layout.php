@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="header">
-      Header
+      <h1>Lyon Shop Webdesign : Evaluations</h1>
     </div>
     <div class="content">
       <?php echo $sf_content ?>

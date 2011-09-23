@@ -69,6 +69,14 @@ class websiteActions extends sfActions
     $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
     $category = Doctrine_Core::getTable('QuestionCategory')->find($request->getParameter('category_id'));
 
+    if ($request->getParameter('target') == 'previous')
+    {
+      $this->redirect('question_form', array(
+        'evaluation_id' => $evaluation->getId(),
+        'category_id' => $this->getUser()->getPreviousQuestion($category->getId())
+      ));
+    }
+      
     $options = array(
       'evaluation' => $evaluation,
       'questionCategory' => $category
@@ -80,24 +88,38 @@ class websiteActions extends sfActions
     
     if($form->isValid())
     {
-      //die('save data');
+      $form->save();
       
-      if ($request->getParameter('target') == 'previous')
-      {
-        $category_id = $this->getUser()->getPreviousQuestion($category->getId());
-      }
-      else
+      if ($request->getParameter('target') == 'next')
       {
         $category_id = $this->getUser()->getNextQuestion($category->getId());
-      } 
-        
-      $this->redirect('question_form', array(
-        'evaluation_id' => $evaluation->getId(),
-        'category_id' => $category_id
-      ));
+        $this->redirect('question_form', array(
+          'evaluation_id' => $evaluation->getId(),
+          'category_id' => $category_id
+        ));
+      }
+      
+      if ($request->getParameter('target') == 'end')
+      {
+        $this->redirect('end_evaluation', array(
+          'evaluation_id' => $evaluation->getId()
+        ));
+      }
+              
     }
     
     $this->form = $form;
     $this->setTemplate('questionForm');
+  }
+  
+  public function executeEndEvaluation(sfWebRequest $request)
+  {
+    $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
+    $evaluation->setIsOver(true);
+    $evaluation->save();
+
+    $total = null;
+    $this->resultsCategories = EvaluationResult::run($evaluation, $total);
+    $this->resultTotal = $total;
   }
 }

@@ -1,6 +1,6 @@
 <table class="homepage">
-  <tr>
-    <th>Adresse du site</th><th>Commercant</th><th>Designer</th><th>Actions</th>
+  <tr class="head">
+    <th class="url">Adresse du site</th><th class="owner">Commercant</th><th class="creator">Designer</th>
   </tr>
   <?php foreach($sites as $site): ?>
     <tr>
@@ -21,6 +21,12 @@
               <a href="<?php echo url_for('edit_evaluation', array('evaluation_id' => $eval->getId())) ?>">
                 <?php echo $eval ?>
               </a>
+              <?php if ($eval->isOver()): ?>
+                | 
+                <a href="<?php echo url_for('end_evaluation', array('evaluation_id' => $eval->getId())) ?>">
+                  Resultat
+                </a>
+              <?php endif; ?>
             </li>
           <?php endforeach; ?>
         </ul>

@@ -6,7 +6,7 @@
   <table class="questions">
     <thead>
       <tr>
-        <th>Questions</th>
+        <th class="question_head">Questions</th>
         <th>
           <ul class="answer_head">
             <li class="onepoint"><p>Pas du tout d'accord</p></li>
@@ -24,11 +24,13 @@
       <tr>
         <td colspan="2">
           <?php if ($previous_id = $sf_user->getPreviousQuestion($form->getQuestionCategory()->getId())): ?>
-            <input type="submit" name="target" value="previous" />
+            <input type="submit" name="target" value="previous" class="previous"/>
           <?php endif; ?>
           
           <?php if ($next_id = $sf_user->getNextQuestion($form->getQuestionCategory()->getId())): ?>
-            <input type="submit" name="target" value="next" />
+            <input type="submit" name="target" value="next" class="next"/>
+          <?php else: ?>
+            <input type="submit" name="target" value="end" class="next"/>
           <?php endif; ?>
         </td>
       </tr>

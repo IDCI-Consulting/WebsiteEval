@@ -12,6 +12,12 @@ edit_evaluation:
   param: { module: website, action: initEvaluation }
   requirements:
     evaluation_id: \d+
+    
+end_evaluation:
+  url: /:evaluation_id/end_evaluation
+  param: { module: website, action: endEvaluation }
+  requirements:
+    evaluation_id: \d+
 
 question_form:
   url: /:evaluation_id/question_form/:category_id

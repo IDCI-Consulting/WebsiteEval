@@ -16,4 +16,9 @@ class Evaluation extends BaseEvaluation
   {
     return sprintf('Evaluation du %s', $this->getCreatedAt());
   }
+  
+  public function isOver()
+  {
+    return $this->getIsOver();
+  }
 }

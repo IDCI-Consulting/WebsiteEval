@@ -12,6 +12,7 @@
     <div class="header">
       <h1>Lyon Shop Webdesign : Evaluations</h1>
       <a href="<?php echo url_for('homepage') ?>" class="home">Accueil</a>
+      <a href="<?php echo url_for('show_result') ?>" class="result"> Resultats </a>
     </div>
     <div class="content">
       <?php echo $sf_content ?>

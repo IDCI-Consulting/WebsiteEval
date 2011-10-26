@@ -17,13 +17,24 @@ body
 {
   font-size: 30px;
   padding-top: 30px;
+  height: 15px;
 }
+
+.header .home
+{
+  background: url("../images/home.png") no-repeat scroll 0px 0px transparent;
+  height: 50px;
+  width: 50px;
+  text-indent: -9999px;
+  display: block;
+}
+
 
 .content table.homepage
 {
   background-color: #fff;
   margin: 0 auto;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   line-height: 22px;
   border-radius: 12px;
   -moz-border-radius: 12px;
@@ -34,7 +45,23 @@ body
 
 .content .homepage tr
 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.content .homepage .head > .url
+{
+  background: url("../images/world.png") no-repeat scroll 95px 3px transparent;
+}
+
+.content .homepage .head > .owner
+{
+  background: url("../images/user.png") no-repeat scroll 105px 3px transparent;
+}
+
+.content .homepage .head > .creator
+{
+  background: url("../images/paintbrush.png") no-repeat scroll 115px 3px transparent;
 }
 
 .content .homepage .eval .new
@@ -58,26 +85,29 @@ body
   width: 350px;
   text-align: center;
   vertical-align: middle;
-}
-
-.top_page 
-{
-  background-color: #ccc;
-  height: 60px;
-  border-bottom: 1px solid #000;
+  padding: 20px 0;
 }
 
 .top_page h1
 {
-  color: #FFF;
-  font-size: 25px;
+  color: #ED7F00;
+  font-size: 27px;
   padding: 15px;
   font-weight: bold;
+  text-align: center;
+  position: fixed;
 }
 
-.questions
+.content form
 {
   margin: 0 auto;
+  width: 1024px;
+  position: relative;
+}
+
+table.questions
+{
+  width: 100%;
 }
 
 .questions tr td,
@@ -89,20 +119,33 @@ body
 .questions tr > th
 {
   text-align: left;
+  line-height: 20px;
+  max-width: 400px;
+  height: 60px;
+  padding: 12px 0;
 }
 
 .questions tr td ul > li,
 .questions thead .answer_head > li
 {
   float: left;
-  width: 230px;
+  width: 145px;
   text-align: center;
+  font-size: 16px;
+}
+
+.questions thead tr .question_head
+{
+  background: url("../images/question.png") no-repeat scroll 100px 15px transparent;
+  font-size: 20px;
+  color: #ed7f00;
+  font-weight: bold;
 }
 
 .questions thead tr th .answer_head > li
 {
-  height: 40px;
-
+  height: 50px;
+  line-height: 15px;
 }
 
 .questions thead tr th .answer_head > li p
@@ -142,10 +185,73 @@ body
 {
   border-bottom: 1px solid #CCCCCC;
 } 
-  
+
+.questions .error_list
+{
+  background: none repeat scroll 0 0 #FF5555;
+  border: 1px solid #FF0000;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  right: -150px;
+  width: 150px
+}
+ 
 .questions tr td ul > li label
 {
   display: none;
+}
+
+.questions tfoot tr .previous
+{
+  float: left;
+}
+
+.questions tfoot tr .next
+{
+  float: right;
+}
+
+.results
+{
+  width: 350px;
+  margin: 40px auto 0;
+  font-weight: bold;
+}
+
+.results tbody tr
+{
+  border-bottom: 1px solid #CCCCCC;
+}
+  
+.results tbody tr > td 
+{
+    height: 60px;
+    line-height: 35px;
+    max-width: 400px;
+    padding: 12px;
+}
+
+.results tbody tr .category
+{
+   text-align: left;
+}
+
+.results tbody .total
+{
+  border: 1px solid #ccc;
+}
+
+.results tbody tr .score,
+.results tbody tr .total_score
+{
+   text-align: right;
+}
+
+.results tbody tr .total_score
+{
+  color: #ed7f00;
 }
 
 a

@@ -33,6 +33,11 @@ question_form_process:
     sf_method: [post]
     evaluation_id: \d+
     category_id: \d+
+    
+show_result:
+  url: /result/show
+  param: { module: result, action: show }
+  
 
 # default rules
 homepage:

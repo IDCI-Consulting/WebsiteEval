@@ -9,6 +9,7 @@ Evaluation:
   actAs:     { Timestampable: ~ }
   columns:
     site_id: { type: integer, notnull: true }
+    is_over: { type: boolean, default: false }
   relations:
     Site:    { onDelete: CASCADE, local: site_id, foreign: id }
   

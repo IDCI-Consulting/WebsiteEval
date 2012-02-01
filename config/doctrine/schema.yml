@@ -4,6 +4,7 @@ Site:
     url:        { type: varchar(128), notnull: true }
     owner:      { type: varchar(128), notnull: true }
     creator:    { type: varchar(128), notnull: true }
+    type:       { type: boolean }
   
 Evaluation:
   actAs:     { Timestampable: ~ }

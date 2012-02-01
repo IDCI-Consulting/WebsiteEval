@@ -5,7 +5,7 @@ all:
      classname:  DebugPDO
      dsn:        mysql:dbname=WebsiteEval;host=localhost
      username:   WebsiteEval
-     password:   websiteeval
+     password:   WebsiteEval
      encoding:   utf8
      persistent: true
      pooling:    true

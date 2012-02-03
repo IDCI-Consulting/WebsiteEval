@@ -5,7 +5,7 @@ Site:
     owner:      { type: varchar(128), notnull: true }
     creator:    { type: varchar(128), notnull: true }
     type:       { type: boolean }
-  
+
 Evaluation:
   actAs:     { Timestampable: ~ }
   columns:
@@ -13,7 +13,7 @@ Evaluation:
     is_over: { type: boolean, default: false }
   relations:
     Site:    { onDelete: CASCADE, local: site_id, foreign: id }
-  
+
 Question:
   columns:
     text:             { type: text, notnull: true }
@@ -22,15 +22,15 @@ Question:
   relations:
     QuestionType:     { onDelete: SET NULL, local: type_id, foreign: id }
     QuestionCategory: { onDelete: CASCADE, local: category_id, foreign: id }
-    
+
 QuestionType:
   columns:
     class_name: { type: varchar(128), notnull: true }
-  
+
 QuestionCategory:
   columns:
     name: { type: varchar(128), notnull: true }
-  
+
 Answer:
   columns:
     evaluation_id:  { type: integer, primary: true }

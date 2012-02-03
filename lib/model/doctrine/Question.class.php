@@ -12,4 +12,8 @@
  */
 class Question extends BaseQuestion
 {
+  public function setText($text)
+  {
+    parent::_set('text', htmlspecialchars($text));
+  }
 }

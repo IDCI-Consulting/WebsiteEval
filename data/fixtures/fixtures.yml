@@ -9,552 +9,540 @@ QuestionCategory:
     name: Référencement
   5:
     name: Développement
+  6:
+    name: Web Marketing
 
 QuestionType:
   1:
     class_name: Choice
-    
+
+SiteType:
+  1:
+    name: Marchand
+  2:
+    name: Vitrine
+
 Question:
+###########
+# Graphisme
+###########
   1:
     text: Le graphisme du site aide à comprendre le secteur d'activité de l'entreprise
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 1
 
   2:
     text: Les illustrations mettent en valeur les produits et les services
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 1
-    
+
   3:
     text: L'internaute comprend où il doit cliquer
-    type_id: 1
-    category_id: 1    
-    
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 1
+
   4:
     text: Le chargement est rapide lors de la première visite
-    type_id: 1
-    category_id: 1    
-    
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 1
+
   5:
-    text: L'actualisation est constante lors d'un rafraichissement
-    type_id: 1
-    category_id: 1    
-    
+    text: Lors de la navigation, le chargement des pages est rapide
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 1
+
   6:
-    text: Lors de la navigation, le chargement des pages est rapide
-    type_id: 1
-    category_id: 1
-    
-  7:
-    text: Le chargement est rapide lors de la première visite
-    type_id: 1
-    category_id: 1
-    
-  8:
     text: L'actualisation est constante lors d'un rafraichissement
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 1
-    
-  9:
-    text: Lors de la navigation, le chargement des pages est rapide
-    type_id: 1
-    category_id: 1
-    
-  10:
+
+  7:
     text: La cible se reconnait facilement dans l'ambiance graphique.
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 1
-    
-  11:
+
+  8:
     text: Les visuels utilisés sont adaptés à la cible
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 1
+
+  9:
+    text: Les valeurs de l'entreprise sont communiquées par le site
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 1
+
+  10:
+    text: Les illustrations sont de bonnes qualités (photos, vidéo...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 1
+
+###########
+# Ergonomie
+###########
+  11:
+    text: La structure et le code couleur sont conservés d'une page à l'autre lors de la navigation (organisation des écrans, des menus, taille et police de caractère, ...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
 
   12:
-    text: Les valeurs de l'entreprise sont communiquées par le site
-    type_id: 1
-    category_id: 1
-    
-  13:
-    text: Les illustrations sont de bonnes qualités (photos, vidéo...)
-    type_id: 1
-    category_id: 1
-    
-  14:
-    text: L'image ou l'objet multimédia possède une alternative textuelle
-    type_id: 1
-    category_id: 2
-    
-  15:
-    text: La structure et le code couleur sont conservés d'une page à l'autre lors de la navigation (organisation des écrans, des menus, taille et police de caractère,...)
-    type_id: 1
-    category_id: 2
-    
-  16:
     text: Les fonctionnalités du moteur de recherche sont satisfaisantes
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 2
-    
-  17:
+
+  13:
     text: Les fonctionnalités du plan du site sont satisfaisantes (Accès une majeure partie des ressources du site, est-il bien structuré?, ...)
-    type_id: 1
-    category_id:  2 
-    
-  18:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  14:
     text: L'information est facilement accessible quand les feuilles de styles sont désactivées, absence du plugin flash, absence du plugin silverlight, absence du plugin java (désactiver les feuilles de style et observer le comportement de la page)
-    type_id: 1
-    category_id:  2   
-    
-  19:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  15:
     text: Le site est adapté pour un navigateur de texte (ex : lecteur d'écran) (Pour noter, regarder si le menu est dans le navigateur lynx)
-    type_id: 1
-    category_id:  2   
-    
-  20:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  16:
     text: Dans les formulaires, l'intitulé des champs est pertinent
-    type_id: 1
-    category_id:  2   
-    
-  21:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  17:
     text: Le contenu informationnel de la page d'accueil permet d'identifier la nature du site (Raison sociale, activité, finalités du site)
-    type_id: 1
-    category_id:  2   
-    
-  22:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  18:
     text: L'adresse du site est facilement mémorisable
-    type_id: 1
-    category_id:  2   
-    
-  23:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  19:
     text: La navigation avec le site est naturelle et intuitive (fil d'Ariane)
-    type_id: 1
-    category_id:  2   
-    
-  24:
-    text: La structuration des pages est cohérente, claire et lisible (on se repère facilement et rapidement (barre de navigation, contenus, aides…))
-    type_id: 1
-    category_id:  2   
-    
-  25:
-    text: Dans un formulaire, les libéllés des champs sont clairs et le nombre de caractères est précisé 
-    type_id: 1
-    category_id:  2   
-    
-  25: 
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  20:
+    text: La structuration des pages est cohérente, claire et lisible (on se repère facilement et rapidement: barre de navigation, contenus, aides ...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  21:
+    text: Dans un formulaire, les libéllés des champs sont clairs et le nombre de caractères est précisé
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  22:
     text: le site répond à l'utilisateur en fonction de ses actions et requêtes (donne un feed-back : confirmation de commande, information de retour, synthèse des achats etc.)
-    type_id: 1
-    category_id:  2   
-    
-  26:
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  23:
     text: Les liens sont explicites et facilement identifiables, repérables.
-    type_id: 1
-    category_id:  2   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  24:
+    text: Une carte du site active est proposée, qui permet d'accéder facilement aux différentes rubriques du site
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  25:
+    text: Il n'y a pas de liens morts
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  26:
+    text: Toutes les informations présentées sur la page d'accueil sont utiles et pertinentes
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
 
   27:
-    text: Une carte du site active est  proposée, qui permet d'accéder facilement aux différentes rubriques du site
-    type_id: 1
-    category_id:  2       
-                      
-  28:   
-    text: Il n'y a pas de liens morts
-    type_id: 1
-    category_id:  2
-    
-  29:   
-    text: Il n'y a pas de liens morts
-    type_id: 1
-    category_id:  2    
-    
-  30:   
-    text: Toutes les informations présentées sur la page d'accueil sont utiles et pertinentes
-    type_id: 1
-    category_id:  2
-  
-  31:   
     text: Toutes les informations présentées sur la page d'accueil sont bien organisées. Elles permettent d'atteindre rapidement les objectifs fixés.
-    type_id: 1
-    category_id:  2 
-    
-  32:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  28:
     text: Peu d'efforts (mémorisation, compréhension...) sont nécessaires pour naviguer sur le site
-    type_id: 1
-    category_id:  2 
-    
-  33:   
-    text: Il n'y a pas d'éléments superflus (animations, images, contenus…, qui affectent la perception, la compréhension et la navigation sur le site)
-    type_id: 1
-    category_id:  2 
-    
-  34:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  29:
+    text: Il n'y a pas d'éléments superflus (animations, images, contenus..., qui affectent la perception, la compréhension et la navigation sur le site)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  30:
     text: Je peux revenir facilement en arrière et annuler mes actions (formulaire, sélection...)
-    type_id: 1
-    category_id:  2 
-    
-  35:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  31:
     text: Il y a possibilité d'ajouter des articles en les faisant glisser dans le panier (glisser-déposer)
-    type_id: 1
-    category_id:  2 
-    
-  36:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  32:
     text: Il n'y a pas d'ouverture intempestive de pop-up, pop-in ou autres fenêtres
-    type_id: 1
-    category_id:  2 
-    
-  37:   
-    text: Le site propose un mode d'affichage différencié selon la consultation sur smartphone, tablette, Iphone, ou écran classique 
-    type_id: 1
-    category_id:  2 
-    
-  38:   
-    text: Les informations utiles et nécessaires à la navigation sont concentrées sur un écran (resolution 1024 de large)(utilisation minimale du scroll /ascenseur vertical)
-    type_id: 1
-    category_id:  2 
-    
-  39:   
-    text: Une assistance en ligne est disponible pour conseiller, accompagner l'acheteur (chat, téléphone…)
-    type_id: 1
-    category_id:  2 
-    
-  40:   
-    text: l'utilisateur peut facilement choisir ses propres critères d'affichage et de classement de liste d'items (par prix, par ordre alphabétique…). (Noter le résultat de la recherche)
-    type_id: 1
-    category_id:  2 
-    
-  41:   
-    text: L'internaute choisit la langue du site (si à vocation internationale)
-    type_id: 1
-    category_id:  2 
-    
-  42:   
-    text: Le contenu, le vocabulaire du site est accessible sans avoir à connaitre le jargon (informatique, produit…)
-    type_id: 1
-    category_id:  2 
-    
-  43:   
-    text: Les messages d'erreurs sont explicites et assistent l'internaute (tester un formulaire et une adresse eronnés)
-    type_id: 1
-    category_id:  2 
-    
-  44:   
-    text: Chaque page comporte des coordonées et des informations relatives au propriétaire du site, au webmaster (adresse mail, coordonnées,…)
-    type_id: 1
-    category_id:  2
-    
-  45:   
-    text: Des moyens sont mis en œuvre pour éviter les erreurs (par exemple : indications sur les champs obligatoires, sur les formats, détection des erreurs saisies ou des champs non saisie…)
-    type_id: 1
-    category_id:  2  
-    
-  46:   
-    text: Le site permet d'annuler mes actions, de revenir facilement en arrière (annulation d'une commande)
-    type_id: 1
-    category_id:  2   
-    
-  47:   
-    text: L'emplacement des menus, boutons et textes redondant est le même sur chaque page,
-    type_id: 1
-    category_id:  2
-    
-  48:   
-    text: Le choix des attributs de l'interface est utilisé de manière cohérente et homogène sur le site (couleurs, formats, police, icônes, termes…)
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  33:
+    text: Les informations utiles et nécessaires à la navigation sont concentrées sur un écran (resolution 1024 de large, utilisation minimale du scroll /ascenseur vertical)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  34:
+    text: l'utilisateur peut facilement choisir ses propres critères d'affichage et de classement de liste d'items (par prix, par ordre alphabétique...). (Noter le résultat de la recherche)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  35:
+    text: Le contenu, le vocabulaire du site est accessible sans avoir à connaitre le jargon (informatique, produit...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  36:
+    text: Les messages d'erreurs sont explicites et assistent l'internaute (tester un formulaire et une url erronnés:404)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  37:
+    text: Chaque page comporte des coordonnées et des informations relatives au propriétaire du site, au webmaster (adresse mail, coordonnées, ...)
+    site_type_id: 1
+    question_type_id: 1
     category_id:  2
 
-  49:   
+  38:
+    text: Des moyens sont mis en œuvre pour éviter les erreurs (par exemple : indications sur les champs obligatoires, sur les formats, détection des erreurs saisies ou des champs non saisie...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  39:
+    text: Lors du processus de commande, le site permet d'annuler mes actions, de revenir facilement en arrière (annulation d'une commande)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  40:
+    text: L'emplacement des menus, boutons et textes redondant est le même sur chaque page
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  41:
+    text: Le choix des attributs de l'interface est utilisé de manière cohérente et homogène sur le site (couleurs, formats, police, icônes, termes ...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  42:
     text: Les abréviations sont explicitées et limitées
-    type_id: 1
-    category_id:  2
-    
-  49:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  43:
     text: Le bouton d'action des achats est bien visible
-    type_id: 1
-    category_id:  2 
-    
-  50:   
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
+
+  44:
     text: Les icônes sont intuitifs, pertinents (cohérence avec sa fonction)
-    type_id: 1
-    category_id:  2      
-        
-  51:   
-    text: Possibilité de modifier, supprimer des éléments au panier durant le processus d'achat (rajouter un élément au panier,…)
-    type_id: 1
-    category_id:  2     
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
 
-  52:   
-    text: Le site garde une trace des derniers achats ou consultations de l'internaute que ce dernier peut consulter (historique des achats,...)
-    type_id: 1
-    category_id:  2 
-    
-  53:   
-    text: Le site est compatible sur toutes plateformes et navigateurs (smartphone, Ipad,….)
-    type_id: 1
-    category_id:  2  
-             
-  11111111111111111:
-    text: Le site respecte des standards
-    type_id: 1
-    category_id: 5
+  45:
+    text: Possibilité de modifier, supprimer des éléments au panier durant le processus d'achat (rajouter un élément au panier, ...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
 
-  22222222222222:
-    text: Le niveau de respect des standards est satisfaisant (voir "Aide développement")
-    type_id: 1
-    category_id: 5
+  46:
+    text: Le site garde une trace des derniers achats ou consultations de l'internaute que ce dernier peut consulter (historique des achats, ...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2 
 
-  333333333333:
-    text: Les technologies serveur utilisées sont satisfaisantes (voir "Aide développement")
-    type_id: 1
-    category_id: 5
+  47:
+    text: Le site présent un affichage identique sur tous les navigateurs (IE, FF, Chrome, Safari dans leur dernière version)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 2
 
-  44444444444:
-    text: Les technologies 'client side' sont utilisées de manière satisfaisante (voir "Aide développement")
-    type_id: 1
-    category_id: 5
-
-  555555555555555:
-    text: http://validator.w3.org
-    type_id: 1
-    category_id: 5
-
-  6666666666666666:
-    text: Le site respecte des standards
-    type_id: 1
-    category_id: 5
-
-  7777777777777:
-    text: http://www.outiref.com/
-    type_id: 1
-    category_id: 5
-
-  8888888888888:
-    text: google adplanner
-    type_id: 1
-    category_id: 5
-
-  999999999999999:
-    text: Pas de doctype ou erreur, HTML 4.01 Frameset 
-    type_id: 1
-    category_id: 5
-
-  10101010101010:
-    text: HTML 4.01 Transitional, XHTML 1.0 Frameset, XHTML 1.1 Frameset
-    type_id: 1
-    category_id: 5
-
-  1212121212121212:
-    text: HTML 4.01 Strict, XHTML 1.0 Transitional, XHTML 1.1 Transitional
-    type_id: 1
-    category_id: 5
-
-
-  13131313131313:
-    text: XHTML 1.0 Strict et XHTML 1.1 Strict
-    type_id: 1
-    category_id: 5
-
-  14141414141414:
-    text: Statique = HTML /CSS
-    type_id: 1
-    category_id: 5
-
-  151515151515151515151515:
-    text: Dynamique = PHP, ASP, ASPX, JSP, PYTHON, CGI, RUBY, Joomla, Spip, Drupal, Google Site, WordPress, DotClear, eZ Publish
-    type_id: 1
-    category_id: 5
-
-  16161616161616161616161616161616:
-    text: E Commerce = OS Commerce, Magento, Presta Shop, Joomla VirtuaMart
-    type_id: 1
-    category_id: 5
-
-  171717171717171717:
-    text: FrameWork / Librairies = DreamWeaver, Symfony, Zend Framework, Ruby on Rails, Pylons, Django
-    type_id: 1
-    category_id: 5
-
-  181818181818181818181818:
-    text: Pas de Technologies client
-    type_id: 1
-    category_id: 5
-
-  1919191919191919191919:
-    text: Technologies client présentes = Javascript, Flash, Java, SilverLight
-    type_id: 1
-    category_id: 5
-
-  202020202020202020:
-    text: Technologies client présentes déco = Javascript, Flash, Java, SilverLight
-    type_id: 1
-    category_id: 5
-
-  2121212121212121:
-    text: Technologies client présentes utiles = Javascript, Flash, Java, SilverLight
-    type_id: 1
-    category_id: 5
-
-  2121212121212121:
-    text: Technologies client présentes utiles = Javascript, Flash, Java, SilverLight
-    type_id: 1
-    category_id: 4
-    
-  41964548541:
-    text: Le nom de domaine est en lien avec une stratégie réelle de référencement.
-    type_id: 1
-    category_id: 4
-
-    
-  23232323232323:
-    text: Le nom de domaine est pertinent pour les sites multilingues (présence d'un nom de domaine par langue : fr, .de, .com) (ne pas noter la question si le site n'est qu'en français)
-    type_id: 1
-    category_id: 4
-
-  24242424242424:
-    text: Le nombre de clic entre la page d'accueil et les pages souhaitées est peu élevé
-    type_id: 1
-    category_id: 4
-
-  252525252525:
-    text: Des balises sont présentes pour structurer le code source (title, description, notion de h1,h2,h3)
-    type_id: 1
-    category_id: 4
-
-  262626262:
-    text: Les moteurs accèdent bien à toutes les fonctionnalités (base de données, actues, catalogue produits...) (utilisation d'un applicatif type robot)
-    type_id: 1
-    category_id: 4
-    
-
-  2727272727:
-    text: Les mots-clés sont en cohérence avec le contenu (tester la page d'accueil et la page produit : regarder le meta key words du code source et regarder les mots clés)
-    type_id: 1
-    category_id: 4
-
-  282828282828:
-    text: La page d'erreur 404 est personalisée
-    type_id: 1
-    category_id: 4
-
-  29292929292929:
-    text: Le plan du site est en format xml
-    type_id: 1
-    category_id: 4
-
-  303003030:
-    text: L'URL de chaque page est réecrit (ex :http://192.45.10.8, http://sitemarchand.com ou http://monsite/produit?id=1 => http://monsite/produit/nom-produit)
-    type_id: 1
-    category_id: 4
-
-  3131313131:
-    text: Le javascript est intrusif (la navigation ne dépend pas du javascript)
-    type_id: 1
-    category_id: 4
-
-  323232323232:
-    text: Le site est référencé dans des sites en adéquation avec son activité
-    type_id: 1
-    category_id: 4
-
-
-  3434343434343434343434343434:
-    text: La description (contenue dans la balise <meta>) ne dépasse pas 200 caractères
-    type_id: 1
-    category_id: 4
-
-  3535353535:
-    text: Le nombre de caractère dans le titre de la page (contenu dans la balise <title>) est optimisé (entre 60 et 70 caractères)
-    type_id: 1
-    category_id: 4
-
-  3636363636:
-    text: Le titre (title) est il personnalisé (prendre en compte la présence et la position du mot cléf)
-    type_id: 1
-    category_id: 4
-
-  3737373737:
-    text: Des mots-clés reviennent de façon redondante
-    type_id: 1
-    category_id: 4
-
-  3838383838383838:
+############
+# Innovation
+############
+  48:
     text: Le site provoque de véritables émotions dès la page d'accueil (emotions = qui sort de l'habitude, qui est creatif)
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  3939393939393939:
-    text: La navigation sur un mobile est satisfaisante
-    type_id: 1
+  49:
+    text: Le site propose un mode d'affichage différencié selon la consultation sur smartphone, tablette, Iphone, ou écran classique 
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  4040404040:
-    text: Les produits sont bien valorisés : 3D, photo 360°, vidéo, photo HD
-    type_id: 1
+  50:
+    text: Une assistance en ligne est disponible pour conseiller, accompagner l'acheteur (chat, téléphone...)
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  4141414141:
+  51:
+    text: Les produits sont bien valorisés : 3D, photo 360°, vidéo, photo HD, ...
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 3
+
+  52:
     text: Le site propose une expérience de navigation unique et spécifique (navigation originale)
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  4242424242:
-    text: Le site propose des fonctionnalités de mise en relation satisfaisantes (e-mailing, newsletter, flux RSS, inscription réseaux sociaux, push-to-talk….)
-    type_id: 1
+  53:
+    text: Le site propose des fonctionnalités de mise en relation (e-mailing, newsletter, flux RSS, inscription réseaux sociaux, push-to-talk ...)
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  43434343434343:
+  54:
     text: Le site propose des systèmes d'alertes innovants (mail, SMS, Tweet) sur la disponibilité des produits
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  454545454545454545:
-    text: Le site provoque de véritables émotions dès la page d'accueil (emotions = qui sort de l'habitude, qui est creatif)
-    type_id: 1
+  55:
+    text: L'utilisateur peut facilement choisir ses propres critères d'affichage et de classement de liste d'items (par prix, par ordre alphabétique ...). (Noter le résultat de la recherche)
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  4646464646464646:
-    text: L'utilisateur peut facilement choisir ses propres critères d'affichage et de classement de liste d'items (par prix, par ordre alphabétique…). (Noter le résultat de la recherche)
-    type_id: 1
+  56:
+    text: Le site propose un suivi de commande en ligne performant. (1 ou 2 => si pas d'info sur le processus de livraison. 3 => si il y a une description du processus. 4 => si une description complète du processus de livraison)
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  4747474747474747:
-    text: Le site propose un suivi de commande en ligne performant. (Si pas d'achat en ligne, ne pas noter cette question. Si achat en ligne : 1ou 2 = si pas d'info sur le processus de livraison. 3 = si il y a une description du processus. 4=si une description complète du processus de livraison)
-    type_id: 1
-    category_id: 3
-
-  4848484848484848:
-    text: L'internaute est incité à laisser un avis et des commentaires
-    type_id: 1
-    category_id: 3
-
-  4949494944949:
-    text: L'entreprise mène des actions concrètes dans les réseaux sociaux (page Facebook compte Twitter…alimentés régulièrement par des offres ou des infos) (lien facebook, ..)
-    type_id: 1
-    category_id: 3
-
-  50505050505050:
-    text: La quantité de fan ou d'abonné correspond de près ou de loin au nombre de clients  sur les points de vente de l'entreprise
-    type_id: 1
-    category_id: 3
-
-  5151515151515151515151515151:
-    text: L'entreprise à une politique de community management (quel tonalité, contenu utilisé… ?) et une interaction avec sa communauté
-    type_id: 1
-    category_id: 3
-
-  5252525252525252525252525252525252:
-    text: Le contenu, publié sur les résaux sociaux par l'entreprise apportent un plus par rapport au site internet
-    type_id: 1
-    category_id: 3
-
-  535353535353535353535353535353:
-    text: Le site de l'entreprise à des outils de partage de contenu pour les réseaux sociaux sur son site internet (bouton "j'aime", "Tweeter", "commenter"…)
-    type_id: 1
-    category_id: 3
-
-  545454545454545454545454545454545454:
+  57:
     text: L'entreprise utilise des outils de géolocalisation pour rendre ses points de ventes plus visibles pour les consommateurs et propose des évenements grâce à ces derniers en utilisant la fonction "check in"
-    type_id: 1
+    site_type_id: 1
+    question_type_id: 1
     category_id: 3
 
-  565656565656565656565656:
-    text: Les informations sur le site et les réseaux sociaux(outils de géolocalisation…) sont à jour et le contenu est récent.
-    type_id: 1
-    category_id: 3                          
+  58:
+    text: Le site défini et respect un doctype HTML5 <!DOCTYPE HTML>
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 3
+
+###############
+# Référencement
+###############
+  59:
+    text: Les images ou objets multimédias possèdent une alternative textuelle
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  60:
+    text: Le nom de domaine est en lien avec une stratégie réelle de référencement.
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  61:
+    text: Le nom de domaine est pertinent pour les sites multilingues (présence d'un nom de domaine par langue : fr, .de, .com)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  62:
+    text: Le nombre de clic entre la page d'accueil et les pages souhaitées est peu élevé
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  63:
+    text: Des balises sont présentes pour structurer le code source (title, description, notion de h1,h2,h3)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  64:
+    text: Les moteurs accèdent bien à toutes les fonctionnalités (base de données, actues, catalogue produits...) (utilisation d'un applicatif type robot)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  65:
+    text: Les mots-clés sont en cohérence avec le contenu (tester la page d'accueil et la page produit : regarder le meta key words du code source et regarder les mots clés)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  66:
+    text: La page d'erreur 404 est personalisée
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  67:
+    text: Le plan du site est en format xml (sitemap.xml à la racine du site web)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  70:
+    text: L'URL de chaque page est réecrite (ex: http://192.45.10.8 => http://sitemarchand.com ou http://monsite/produit?id=1 => http://monsite/produit/nom-produit)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  71:
+    text: Le javascript est non obstrsusif (la navigation ne dépend pas du javascript)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  72:
+    text: Le site est référencé dans des annuaires ou sites en adéquation avec son activité
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  73:
+    text: La balise <meta type="description"> ne dépasse pas 200 caractères
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  74:
+    text: Le nombre de caractère dans la balise <title> est optimisé (entre 60 et 70 caractères)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  75:
+    text: La balise <title> est personnalisée en fonction des pages et de leur contenue.
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+  76:
+    text: Des mots-clés reviennent de façon redondante
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 4
+
+###############
+# Développement
+###############
+
+  77:
+    text: Le site respecte des standards
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 5
+
+  78:
+    text: Le niveau de respect des standards est satisfaisant (voir "Aide développement")
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 5
+
+  79:
+    text: Les technologies serveur utilisées sont satisfaisantes (voir "Aide développement")
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 5
+
+  80:
+    text: Les technologies 'client side' sont utilisées de manière satisfaisante (voir "Aide développement")
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 5
+
+###############
+# Web Marketing
+###############
+  81:
+    text: L'internaute est incité à laisser un avis et des commentaires
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+
+  82:
+    text: L'entreprise mène des actions concrètes sur les réseaux sociaux (page Facebook compte Twitter... alimentés régulièrement par des offres ou des infos) (lien facebook, ..)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+
+  83:
+    text: L'entreprise à une politique de community management (quel tonalité, contenu utilisé... ?) et une interaction avec sa communauté
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+
+  84:
+    text: Le contenu, publié sur les résaux sociaux par l'entreprise apportent un plus par rapport au site internet
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+
+  85:
+    text: Le site de l'entreprise à des outils de partage de contenu pour les réseaux sociaux sur son site internet (bouton "j'aime", "Tweeter", "commenter"...)
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+
+  86:
+    text: Les informations sur le site et les réseaux sociaux (outils de géolocalisation...) sont à jour et le contenu est récent.
+    site_type_id: 1
+    question_type_id: 1
+    category_id: 6
+

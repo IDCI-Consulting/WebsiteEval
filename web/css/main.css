@@ -20,6 +20,11 @@ body
   height: 15px;
 }
 
+.header > a
+{
+  float: left;
+}
+
 .header .home
 {
   background: url("../images/home.png") no-repeat scroll 0px 0px transparent;
@@ -29,79 +34,116 @@ body
   display: block;
 }
 
+.header .result
+{
+  background: url("../images/result.png") no-repeat scroll 0px 0px transparent;
+  height: 50px;
+  width: 50px;
+  text-indent: -9999px;
+  display: block;
+}
 
 .content table.homepage
 {
-  background-color: #fff;
   margin: 0 auto;
-  border: 1px solid #ccc;
   line-height: 22px;
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   margin-top: 50px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .content .homepage tr
 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dotted #ccc;
 }
 
-
-.content .homepage .head > .url
+.content .homepage tr:last-child
 {
-  background: url("../images/world.png") no-repeat scroll 95px 3px transparent;
+  border: none;
 }
 
-.content .homepage .head > .owner
-{
-  background: url("../images/user.png") no-repeat scroll 105px 3px transparent;
-}
-
-.content .homepage .head > .creator
-{
-  background: url("../images/paintbrush.png") no-repeat scroll 115px 3px transparent;
-}
+.content .homepage .head > th { padding-left: 24px; text-align: left; font-weight: bold; }
+.content .homepage .head > .url{ background: url("../images/world.png") no-repeat 0 2px; }
+.content .homepage .head > .owner{ background: url("../images/user.png") no-repeat 0 2px; }
+.content .homepage .head > .creator{ background: url("../images/paintbrush.png") no-repeat 0 2px; }
 
 .content .homepage .eval .new
 {
-  background: url("../images/new.png") no-repeat scroll 0 0 transparent;
-  padding-left: 20px;
-  font-size: 20px;
+  background: #CCC url("../images/new.png") no-repeat 4px 4px;
+  font-weight: bold;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 4px 8px 4px 24px;
+  border: 1px outset #555;
+  color: #222;
+}
+
+.content .homepage .eval .new:hover
+{
+  text-decoration: none;
+  color: #000;
+  text-shadow: 0 0 4px #FFF;
 }
 
 .content .homepage .eval .old
 {
-  margin-top: 20px;
-  font-size: 16px;
+  clear: both;
+  margin-top: 8px;
   max-height: 150px;
-  overflow: auto;
+  overflow-y: scroll;
   display: block;
+  border: 1px inset #CCC;
+}
+
+.content .homepage .eval .old > li
+{
+  padding: 2px;
+}
+
+.content .homepage .eval .old > li:hover
+{
+  background: #F0F0F0;
 }
 
 .content .homepage td
 {
   width: 350px;
-  text-align: center;
   vertical-align: middle;
-  padding: 20px 0;
+  padding: 2px 0;
+}
+
+.content .homepage td.eval
+{
+  padding: 8px 0;
+}
+
+.top_page
+{
+  padding: 5px;
+  position: fixed;
+  width: 220px;
 }
 
 .top_page h1
 {
+  font-weight: bold;
   color: #ED7F00;
   font-size: 27px;
-  padding: 15px;
-  font-weight: bold;
-  text-align: center;
-  position: fixed;
+}
+
+.top_page h2
+{
+  font-size: small;
+  margin-top: 10px;
 }
 
 .content form
 {
-  margin: 0 auto;
-  width: 1024px;
+  border-left: 1px solid #CCCCCC;
+  margin: 0 0 0 230px;
   position: relative;
 }
 
@@ -114,15 +156,32 @@ table.questions
 .questions tr th
 {
   vertical-align: middle;
+  padding-left: 6px;
 }
 
-.questions tr > th
+.questions tr th
 {
   text-align: left;
   line-height: 20px;
-  max-width: 400px;
   height: 60px;
-  padding: 12px 0;
+  padding-top: 8px;
+  padding-bottom: 8px
+}
+
+.questions tr th label p
+{
+  font-size: 12px;
+}
+
+.questions tr th label p strong
+{
+  background: #AAA;
+  color: #FFF;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  margin-right: 8px;
+  padding: 4px 8px;
 }
 
 .questions tr td ul > li,
@@ -140,6 +199,12 @@ table.questions
   font-size: 20px;
   color: #ed7f00;
   font-weight: bold;
+}
+
+.questions thead tr th .answer_head
+{
+  width: 580px;
+  margin: 0 10px;
 }
 
 .questions thead tr th .answer_head > li
@@ -201,6 +266,16 @@ table.questions
 .questions tr td ul > li label
 {
   display: none;
+}
+
+.questions tfoot
+{
+  background: #CCC;
+}
+
+.questions tfoot tr td
+{
+  padding: 8px; 
 }
 
 .questions tfoot tr .previous

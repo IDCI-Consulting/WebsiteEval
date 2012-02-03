@@ -23,7 +23,7 @@ class websiteActions extends sfActions
   public function executeInitEvaluation(sfWebRequest $request)
   {
     $questionCategories = Doctrine_Core::getTable('QuestionCategory')->findAll();
-    
+
     $categories = array();
     foreach ($questionCategories as $questionCategory)
     {
@@ -50,7 +50,7 @@ class websiteActions extends sfActions
       'category_id' => $this->getUser()->getFirstQuestionCategoryId()
     ));
   }
-  
+
   public function executeQuestionForm(sfWebRequest $request)
   {
     $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
@@ -60,7 +60,7 @@ class websiteActions extends sfActions
       'evaluation' => $evaluation,
       'questionCategory' => $category
     );
-    
+
     $this->form = new QuestionsCategoryForm(array(), $options);
   }
   
@@ -76,20 +76,19 @@ class websiteActions extends sfActions
         'category_id' => $this->getUser()->getPreviousQuestion($category->getId())
       ));
     }
-      
+
     $options = array(
       'evaluation' => $evaluation,
       'questionCategory' => $category
     );
-    
+
     $form = new QuestionsCategoryForm(array(), $options);
-    
+
     $form->bind($request->getParameter($form->getName()));
-    
     if($form->isValid())
     {
       $form->save();
-      
+
       if ($request->getParameter('target') == 'next')
       {
         $category_id = $this->getUser()->getNextQuestion($category->getId());
@@ -98,20 +97,19 @@ class websiteActions extends sfActions
           'category_id' => $category_id
         ));
       }
-      
+
       if ($request->getParameter('target') == 'end')
       {
         $this->redirect('end_evaluation', array(
           'evaluation_id' => $evaluation->getId()
         ));
       }
-              
     }
-    
+
     $this->form = $form;
     $this->setTemplate('questionForm');
   }
-  
+
   public function executeEndEvaluation(sfWebRequest $request)
   {
     $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
@@ -121,5 +119,6 @@ class websiteActions extends sfActions
     $total = null;
     $this->resultsCategories = EvaluationResult::run($evaluation, $total);
     $this->resultTotal = $total;
+    $this->evaluation = $evaluation;
   }
 }

@@ -14,7 +14,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        display: [id, url, owner, creator, _siteType, created_at]
       filter:  ~
       form:    ~
       edit:    ~

@@ -12,4 +12,8 @@
  */
 class Site extends BaseSite
 {
+  public function __toString()
+  {
+    return $this->getUrl();
+  }
 }

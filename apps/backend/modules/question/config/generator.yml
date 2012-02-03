@@ -14,7 +14,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        display: [id, text, _siteType, _questionType, _category]
       filter:  ~
       form:    ~
       edit:    ~

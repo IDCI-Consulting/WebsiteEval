@@ -12,4 +12,8 @@
  */
 class QuestionType extends BaseQuestionType
 {
+  public function __toString()
+  {
+    return $this->getClassName();
+  }
 }

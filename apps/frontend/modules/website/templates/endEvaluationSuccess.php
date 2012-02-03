@@ -1,5 +1,6 @@
 <div class="top_page">
   <h1>Resultats</h1>
+  <h2><?php echo $evaluation->getSite() ?></h2>
 </div>
 
 <table class="results">

@@ -3,7 +3,7 @@
 class EvaluationResult
 {
 
-  const SCORE_SCALE = 20;
+  const SCORE_SCALE = 100;
   const MAX_SCORE_BY_QUESTION = 4;
 
   /**
@@ -16,25 +16,25 @@ class EvaluationResult
   public static function run(Evaluation $evaluation, & $total = null)
   {
     $answers = $evaluation->getAnswer();
-    
+
     $tmp = array();
-    
+
     foreach ($answers as $answer) {
 
       $categoryName = $answer->getQuestion()->getQuestionCategory()->getName();
       if (!isset($tmp[$categoryName])) {
          $tmp[$categoryName] = array('score' => 0, 'count' => 0);
       }
-      
+
       $score = $tmp[$categoryName]['score'];
       $count = $tmp[$categoryName]['count'];
-      
+
       $tmp[$categoryName] = array(
         'score' => $score + $answer->getValue(),
         'count' => $count + 1
       );
     }
-    
+
     $ret = array();
     $i = 0;
     $total_value = 0;
@@ -48,12 +48,12 @@ class EvaluationResult
       $total_value += $score;
       $i++;
     }
-    
+
     $total = sprintf('%.2f/%d',
       $total_value,
       $i * self::SCORE_SCALE
     );
-    
+
     return $ret;
   }
 }

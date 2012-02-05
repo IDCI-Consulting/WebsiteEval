@@ -35,6 +35,6 @@ abstract class BaseQuestionType extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Question', array(
              'local' => 'id',
-             'foreign' => 'type_id'));
+             'foreign' => 'question_type_id'));
     }
 }

@@ -8,16 +8,22 @@
  * @property varchar $url
  * @property varchar $owner
  * @property varchar $creator
+ * @property integer $site_type_id
+ * @property SiteType $SiteType
  * @property Doctrine_Collection $Evaluation
  * 
- * @method varchar             getUrl()        Returns the current record's "url" value
- * @method varchar             getOwner()      Returns the current record's "owner" value
- * @method varchar             getCreator()    Returns the current record's "creator" value
- * @method Doctrine_Collection getEvaluation() Returns the current record's "Evaluation" collection
- * @method Site                setUrl()        Sets the current record's "url" value
- * @method Site                setOwner()      Sets the current record's "owner" value
- * @method Site                setCreator()    Sets the current record's "creator" value
- * @method Site                setEvaluation() Sets the current record's "Evaluation" collection
+ * @method varchar             getUrl()          Returns the current record's "url" value
+ * @method varchar             getOwner()        Returns the current record's "owner" value
+ * @method varchar             getCreator()      Returns the current record's "creator" value
+ * @method integer             getSiteTypeId()   Returns the current record's "site_type_id" value
+ * @method SiteType            getSiteType()     Returns the current record's "SiteType" value
+ * @method Doctrine_Collection getEvaluation()   Returns the current record's "Evaluation" collection
+ * @method Site                setUrl()          Sets the current record's "url" value
+ * @method Site                setOwner()        Sets the current record's "owner" value
+ * @method Site                setCreator()      Sets the current record's "creator" value
+ * @method Site                setSiteTypeId()   Sets the current record's "site_type_id" value
+ * @method Site                setSiteType()     Sets the current record's "SiteType" value
+ * @method Site                setEvaluation()   Sets the current record's "Evaluation" collection
  * 
  * @package    sf_sandbox
  * @subpackage model
@@ -44,11 +50,20 @@ abstract class BaseSite extends sfDoctrineRecord
              'notnull' => true,
              'length' => 128,
              ));
+        $this->hasColumn('site_type_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
+             ));
     }
 
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('SiteType', array(
+             'local' => 'site_type_id',
+             'foreign' => 'id',
+             'onDelete' => 'SET NULL'));
+
         $this->hasMany('Evaluation', array(
              'local' => 'id',
              'foreign' => 'site_id'));

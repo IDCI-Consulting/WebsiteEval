@@ -43,7 +43,36 @@ body
   display: block;
 }
 
-.content table.homepage
+/* Site list */
+.content .sites
+{
+  width: 49%;
+  overflow: auto;
+}
+
+.content .sites h2
+{
+  text-align: center;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.content .sites.dealers
+{
+  float: left;
+  box-shadow: 4px 4px 4px #CCC;
+  -moz-box-shadow: 4px 4px 4px #CCC;
+  -webkit-box-shadow: 4px 4px 4px #CCC;
+}
+.content .sites.showcases
+{
+  float: right;
+  box-shadow: -4px 4px 4px #CCC;
+  -moz-box-shadow: -4px 4px 4px #CCC;
+  -webkit-box-shadow: -4px 4px 4px #CCC;
+}
+
+.content .sites > table
 {
   margin: 0 auto;
   line-height: 22px;
@@ -52,24 +81,38 @@ body
   -webkit-border-radius: 12px;
   margin-top: 50px;
   font-size: 14px;
+  width: 100%;
 }
 
-.content .homepage tr
+.content .sites > table tr
 {
   border-bottom: 1px dotted #ccc;
 }
 
-.content .homepage tr:last-child
+.content .sites > table tr:last-child
 {
   border: none;
 }
 
-.content .homepage .head > th { padding-left: 24px; text-align: left; font-weight: bold; }
-.content .homepage .head > .url{ background: url("../images/world.png") no-repeat 0 2px; }
-.content .homepage .head > .owner{ background: url("../images/user.png") no-repeat 0 2px; }
-.content .homepage .head > .creator{ background: url("../images/paintbrush.png") no-repeat 0 2px; }
+.content .sites > table thead th { padding: 4px 4px 4px 24px ; text-align: left; font-weight: bold; }
+.content .sites > table thead .url{ background: url("../images/world.png") no-repeat 5px 6px; }
+.content .sites > table thead .owner{ background: url("../images/user.png") no-repeat 5px 6px; }
+.content .sites > table thead .creator{ background: url("../images/paintbrush.png") no-repeat 5px 6px; }
 
-.content .homepage .eval .new
+.content .sites > table td.eval
+{
+  padding: 8px 4px;
+  width: 220px;
+}
+
+.content .sites > table .category
+{
+  font-size: x-small;
+  text-align: left;
+  padding: 0;
+}
+
+.content .sites > table .eval .new
 {
   background: #CCC url("../images/new.png") no-repeat 4px 4px;
   font-weight: bold;
@@ -81,43 +124,42 @@ body
   color: #222;
 }
 
-.content .homepage .eval .new:hover
+.content .sites > table .eval .new:hover
 {
   text-decoration: none;
   color: #000;
   text-shadow: 0 0 4px #FFF;
 }
 
-.content .homepage .eval .old
+.content .sites > table .eval .old
 {
   clear: both;
   margin-top: 8px;
-  max-height: 150px;
+  max-height: 52px;
   overflow-y: scroll;
   display: block;
   border: 1px inset #CCC;
 }
 
-.content .homepage .eval .old > li
+.content .sites > table .eval .old > li
 {
   padding: 2px;
 }
 
-.content .homepage .eval .old > li:hover
+.content .sites > table .eval li
+{
+  font-size: 9px;
+}
+
+.content .sites > table .eval .old > li:hover
 {
   background: #F0F0F0;
 }
 
-.content .homepage td
+.content .sites > table td
 {
-  width: 350px;
   vertical-align: middle;
-  padding: 2px 0;
-}
-
-.content .homepage td.eval
-{
-  padding: 8px 0;
+  padding: 4px;
 }
 
 .top_page

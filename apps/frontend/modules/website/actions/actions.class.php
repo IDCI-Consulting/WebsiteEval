@@ -17,9 +17,10 @@ class websiteActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->sites = Doctrine_Core::getTable('Site')->findAll();
+    $this->dealers = Doctrine_Core::getTable('Site')->getDealers();
+    $this->showcases = Doctrine_Core::getTable('Site')->getShowcases();
   }
-  
+
   public function executeInitEvaluation(sfWebRequest $request)
   {
     $questionCategories = Doctrine_Core::getTable('QuestionCategory')->findAll();
@@ -114,11 +115,12 @@ class websiteActions extends sfActions
   {
     $evaluation = Doctrine_Core::getTable('Evaluation')->find($request->getParameter('evaluation_id'));
     $evaluation->setIsOver(true);
-    $evaluation->save();
 
     $total = null;
     $this->resultsCategories = EvaluationResult::run($evaluation, $total);
-    $this->resultTotal = $total;
+    $evaluation->setResult($total);
+    $evaluation->save();
+
     $this->evaluation = $evaluation;
   }
 }

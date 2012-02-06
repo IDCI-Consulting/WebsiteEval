@@ -22,7 +22,7 @@
        TOTAL :
       </td>
       <td class="total_score">
-       <?php echo $resultTotal ?>
+       <?php echo $evaluation->getResult() ?>
       </td>
     </tr>
   </tbody>

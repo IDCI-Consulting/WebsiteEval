@@ -16,4 +16,21 @@ class EvaluationTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Evaluation');
     }
+
+    public static function getRanking($site_type = null)
+    {
+      $q = Doctrine_Query::create()
+        ->from('Evaluation e');
+
+      if($site_type)
+      {
+        $q->leftJoin('e.Site s')
+          ->leftJoin('s.SiteType st')
+          ->where('st.name = ?', $site_type);
+      }
+
+      $q->orderBy('e.result DESC');
+
+      return $q->execute();
+    }
 }

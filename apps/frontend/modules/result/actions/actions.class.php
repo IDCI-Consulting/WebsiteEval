@@ -18,6 +18,7 @@ class resultActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    
+    $this->dealers = EvaluationTable::getRanking(SiteTable::DEALER);
+    $this->showcases = EvaluationTable::getRanking(SiteTable::SHOWCASE);
   }
 }

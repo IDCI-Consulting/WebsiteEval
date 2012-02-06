@@ -16,4 +16,15 @@ class QuestionCategory extends BaseQuestionCategory
   {
     return $this->getName();
   }
+
+  public function getQuestionsForSiteType($site_type)
+  {
+    $q = Doctrine_Query::create()
+        ->from('Question q')
+        ->leftJoin('q.QuestionCategory qc')
+        ->where('qc.id = ?', $this->getId())
+        ->andWhere('q.site_type_id is NULL OR q.site_type_id = ?', $site_type->getId());
+
+      return $q->execute();
+  }
 }

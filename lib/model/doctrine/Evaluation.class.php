@@ -14,9 +14,9 @@ class Evaluation extends BaseEvaluation
 {
   public function __toString()
   {
-    return sprintf('Evaluation du %s', $this->getCreatedAt());
+    return sprintf('Evaluation du %s', $this->getDateTimeObject('created_at')->format('d/m/Y à H:i'));
   }
-  
+
   public function isOver()
   {
     return $this->getIsOver();

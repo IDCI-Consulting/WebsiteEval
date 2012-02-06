@@ -7,6 +7,9 @@
  */
 class SiteTable extends Doctrine_Table
 {
+    const DEALER = 'Marchand';
+    const SHOWCASE = 'Vitrine';
+
     /**
      * Returns an instance of this class.
      *
@@ -15,5 +18,25 @@ class SiteTable extends Doctrine_Table
     public static function getInstance()
     {
         return Doctrine_Core::getTable('Site');
+    }
+
+    public static function getDealers()
+    {
+      return self::getSiteType(self::DEALER);
+    }
+
+    public static function getShowcases()
+    {
+      return self::getSiteType(self::SHOWCASE);
+    }
+
+    public static function getSiteType($type)
+    {
+      $q = Doctrine_Query::create()
+        ->from('Site s')
+        ->leftJoin('s.SiteType st')
+        ->where('st.name = ?', $type);
+
+      return $q->execute();
     }
 }

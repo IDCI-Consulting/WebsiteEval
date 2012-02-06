@@ -14,13 +14,18 @@ class QuestionsCategoryForm extends sfForm
     return $this->getOption('questionCategory');
   }
 
+  public function getSiteType()
+  {
+    return $this->getEvaluation()->getSite()->getSiteType();
+  }
+
   public function configure()
   {
     $this->widgetSchema['evaluation_id'] = new sfWidgetFormInputHidden();
     $this->validatorSchema['evaluation_id'] = new sfValidatorInteger();
     $this->setDefault('evaluation_id', $this->getEvaluation()->getId());
 
-    foreach($this->getQuestionCategory()->getQuestion() as $question)
+    foreach($this->getQuestionCategory()->getQuestionsForSiteType($this->getSiteType()) as $question)
     {
       $choices = array(
         1 => 'Pas du tout d\'accord',

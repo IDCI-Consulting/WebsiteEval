@@ -14,6 +14,8 @@ class SiteType extends BaseSiteType
 {
   public function __toString()
   {
-    return $this->getName();
+    if($this->getName())
+      return $this->getName();
+    return '-';
   }
 }

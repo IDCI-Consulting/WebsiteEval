@@ -17,6 +17,7 @@ Evaluation:
   columns:
     site_id: { type: integer, notnull: true }
     is_over: { type: boolean, default: false }
+    result:  { type: float }
   relations:
     Site:    { onDelete: CASCADE, local: site_id, foreign: id }
 
@@ -25,7 +26,7 @@ Question:
     text:             { type: text, notnull: true }
     site_type_id:     { type: integer, notnull: false }
     question_type_id: { type: integer, notnull: false }
-    category_id:      { type: integer, notnull: false }
+    category_id:      { type: integer, notnull: true }
   relations:
     SiteType:         { onDelete: SET NULL, local: site_type_id, foreign: id }
     QuestionType:     { onDelete: SET NULL, local: question_type_id, foreign: id }

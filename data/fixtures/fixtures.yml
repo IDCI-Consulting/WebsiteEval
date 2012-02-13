@@ -15,6 +15,7 @@ QuestionCategory:
 QuestionType:
   1:
     class_name: Choice
+  2:
     class_name: Boolean
 
 SiteType:

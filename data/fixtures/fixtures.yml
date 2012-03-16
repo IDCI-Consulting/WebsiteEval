@@ -390,22 +390,22 @@ Question:
 # Développement
 ###############
   70:
-    text: Le niveau de respect des standards est satisfaisant (voir "Aide développement")
+    text: Le site respect les standards (Erreur: 0, HTML 4.01: 1, XHTML 1.0: 2, XHTML 1.1 ou HTML5: 3)
     question_type_id: 1
     category_id: 5
 
   71:
-    text: Les technologies serveur utilisées sont satisfaisantes (voir "Aide développement")
+    text: Utilisation de sprites pour les images 'décorations' afin d'optimiser le chargement (Inspecter avec firefox sur les images)
     question_type_id: 1
     category_id: 5
 
   72:
-    text: Les technologies 'client side' sont utilisées de manière satisfaisante (voir "Aide développement")
+    text: La navigation sur le site fonctionne sans javascript (Désactiver javascript et naviguer dans les menus ou ajouter un produit au panier par exemple)
     question_type_id: 1
     category_id: 5
 
   73:
-    text: Le site est adapté pour un navigateur de texte (ex : lecteur d'écran) (Pour noter, regarder si le menu est dans le navigateur lynx)
+    text: Le site est adapté pour un navigateur de texte (ex : lecteur d'écran) (Pour noter, regarder le site à l'aide du plugin firefox: Yellowpipe Lynx Viewer Tool)
     question_type_id: 1
     category_id: 5
 
@@ -453,6 +453,6 @@ Question:
     category_id: 6
 
   82:
-    text: Fiche produit: plus de 2 photos
+    text: Fiche produit: 2 à 6 photos
     question_type_id: 1
     category_id: 6

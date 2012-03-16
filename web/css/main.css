@@ -194,11 +194,22 @@ table.questions
   width: 100%;
 }
 
+.questions tr
+{
+  height: 50px;
+}
+
+.questions tbody > tr
+{
+  border-bottom: 1px solid #CCCCCC;
+}
+
 .questions tr td,
 .questions tr th
 {
   vertical-align: middle;
   padding-left: 6px;
+  position: relative;
 }
 
 .questions tr th
@@ -208,6 +219,7 @@ table.questions
   height: 60px;
   padding-top: 8px;
   padding-bottom: 8px
+  width: 42%;
 }
 
 .questions tr th label p
@@ -283,28 +295,19 @@ table.questions
   background-color: #B6C707;
 }
 
-.questions tr 
-{
-  height: 50px;
-}
-
-.questions tbody > tr
-{
-  border-bottom: 1px solid #CCCCCC;
-} 
-
 .questions .error_list
 {
   background: none repeat scroll 0 0 #FF5555;
   border: 1px solid #FF0000;
   color: #FFFFFF;
   font-weight: bold;
-  padding: 10px;
+  padding: 2px;
   position: absolute;
-  right: -150px;
-  width: 150px
+  top: 0;
+  left: 0px;
+  width: 99%;
 }
- 
+
 .questions tr td ul > li label
 {
   display: none;
